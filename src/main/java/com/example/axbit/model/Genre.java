@@ -9,11 +9,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 @Entity(name = "genres")
-public class Genre extends DatesOfCreationAndModification {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private Long id;
+public class Genre extends AbstractEntity {
     @Column
     private String description;
 }

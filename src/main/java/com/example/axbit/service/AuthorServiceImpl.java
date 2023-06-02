@@ -11,44 +11,44 @@ import java.util.List;
 
 @Service
 @Transactional
-public class AuthorServiceImpl implements AuthorService {
+public class AuthorServiceImpl extends AbstractServiceImpl<Author, AuthorRepository> implements AuthorService {
     private final AuthorRepository authorRepository;
-
     @Autowired
     public AuthorServiceImpl(AuthorRepository authorRepository) {
+        super(authorRepository);
         this.authorRepository = authorRepository;
     }
 
     @Override
-    public List<Author> getAllAuthor() {
-        return authorRepository.findAll();
+    public List<Author> getAllEntity() {
+        return super.getAllEntity();
     }
 
     @Override
-    public Author getAuthorById(Long id) {
-        return authorRepository.findById(id).orElse(null);
+    public Author getEntityById(Long id) {
+        return super.getEntityById(id);
+    }
+
+    @Override
+    public void deleteEntityById(Long id) {
+        super.deleteEntityById(id);
     }
 
     @Override
     public void createAuthor(Author author) {
-        author.setDateOfCreation(LocalDate.now());
+        author.setCreationDate(LocalDate.now());
         author.setModificationDate(LocalDate.now());
         authorRepository.save(author);
     }
 
     @Override
     public void updateAuthorById(Long id, Author author) {
-        Author authorUpdate = getAuthorById(id);
+        Author authorUpdate = getEntityById(id);
         authorUpdate.setName(author.getName());
         authorUpdate.setSurname(author.getSurname());
         authorUpdate.setPatronymic(author.getPatronymic());
         authorUpdate.setDateOfBirth(author.getDateOfBirth());
         authorUpdate.setModificationDate(LocalDate.now());
         authorRepository.save(authorUpdate);
-    }
-
-    @Override
-    public void deleteAuthorById(Long id) {
-        authorRepository.deleteById(id);
     }
 }

@@ -1,7 +1,8 @@
 package com.example.axbit.controller;
 
+import com.example.axbit.model.AbstractEntity;
 import com.example.axbit.model.Book;
-import com.example.axbit.service.AuthorService;
+import com.example.axbit.repository.AuthorRepository;
 import com.example.axbit.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,28 +13,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class BookController {
+public class BookController extends AbstractControllerImpl<Book, BookService> {
     private final BookService bookService;
-    private final AuthorService authorService;
+    private final AuthorRepository authorRepository;
 
     @Autowired
-    public BookController(BookService bookService, AuthorService authorService) {
+    public BookController(BookService bookService, AuthorRepository authorRepository) {
+        super(bookService);
         this.bookService = bookService;
-        this.authorService = authorService;
+        this.authorRepository = authorRepository;
     }
 
+    @Override
     @GetMapping("/books")
-    public ResponseEntity<List<Book>> getAllBooks() {
-        try {
-            List<Book> books = new ArrayList<>(bookService.getAllBooks());
+    public ResponseEntity<List<? extends AbstractEntity>> getAllEntity() {
+        return super.getAllEntity();
+    }
 
-            if (books.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            return new ResponseEntity<>(books, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @Override
+    @GetMapping("book/{id}")
+    public ResponseEntity<AbstractEntity> getEntityById(@PathVariable Long id) {
+        return super.getEntityById(id);
+    }
+
+    @Override
+    @DeleteMapping("/book/delete/{id}")
+    public ResponseEntity<HttpStatus> deleteEntityById(@PathVariable Long id) {
+        return super.deleteEntityById(id);
     }
 
     @GetMapping("/author/books/{authorId}")
@@ -50,18 +56,9 @@ public class BookController {
         }
     }
 
-    @GetMapping("book/{id}")
-    public ResponseEntity<Book> getBookById(@PathVariable Long id) {
-        Book book = bookService.getBookById(id);
-        if (book == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(book, HttpStatus.OK);
-    }
-
     @PostMapping("/book/create/{authorId}")
     public ResponseEntity<Book> createBook(@RequestBody Book book, @PathVariable Long authorId) {
-        if (book == null || authorService.getAuthorById(authorId) == null) {
+        if (book == null || authorRepository.findById(authorId).isEmpty()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         bookService.createBook(authorId, book);
@@ -77,12 +74,5 @@ public class BookController {
         this.bookService.updateBookById(id, book);
 
         return new ResponseEntity<>(book, HttpStatus.OK);
-    }
-
-    @DeleteMapping("/book/delete/{id}")
-    public ResponseEntity<HttpStatus> deleteBookById(@PathVariable Long id) {
-        bookService.deleteBookById(id);
-
-        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

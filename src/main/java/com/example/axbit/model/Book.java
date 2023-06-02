@@ -13,11 +13,7 @@ import javax.validation.constraints.NotNull;
 @ToString
 @NoArgsConstructor
 @Entity(name = "books")
-public class Book extends DatesOfCreationAndModification {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
-    private Long id;
+public class Book extends AbstractEntity {
     private String bookTitle;
     @NotNull
     @ISBN

@@ -1,4 +1,4 @@
-package com.example.axbit.setting;
+package com.example.axbit.util;
 
 public class IsbnGenerator {
     public static String isbnGenerator() {
