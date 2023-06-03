@@ -1,7 +1,10 @@
-INSERT INTO authors (name, surname, patronymic, date_of_birth, creation_date)
-VALUES ('Ivan', 'Petrov', 'Vasilevich', '1995-12-22 +03', '2022-01-10 +03');
+INSERT INTO authors (name, surname, patronymic, date_of_birth, creation_date, modification_date)
+VALUES ('Ivan', 'Petrov', 'Vasilevich', '1995-12-22 +03', CURDATE(), CURDATE());
 
-INSERT INTO books (isbn, genre, author_id)
-VALUES ('978-5-01-834511-4', 'fantasy', 1);
+INSERT INTO genres (description, creation_date, modification_date)
+    VALUE ('fantasy', CURDATE(), CURDATE());
+
+INSERT INTO books (book_title, isbn, genre_id, author_id, creation_date, modification_date)
+VALUES ('Ostrov Sokrovisch', '978-5-01-834511-4', 1, 1, CURDATE(), CURDATE());
 
 COMMIT;

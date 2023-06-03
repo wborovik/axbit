@@ -3,6 +3,7 @@ package com.example.axbit.controller;
 import com.example.axbit.model.AbstractEntity;
 import com.example.axbit.model.Book;
 import com.example.axbit.repository.AuthorRepository;
+import com.example.axbit.repository.GenreRepository;
 import com.example.axbit.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,12 +17,14 @@ import java.util.List;
 public class BookController extends AbstractControllerImpl<Book, BookService> {
     private final BookService bookService;
     private final AuthorRepository authorRepository;
+    private final GenreRepository genreRepository;
 
     @Autowired
-    public BookController(BookService bookService, AuthorRepository authorRepository) {
+    public BookController(BookService bookService, AuthorRepository authorRepository, GenreRepository genreRepository) {
         super(bookService);
         this.bookService = bookService;
         this.authorRepository = authorRepository;
+        this.genreRepository = genreRepository;
     }
 
     @Override
@@ -56,12 +59,12 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
         }
     }
 
-    @PostMapping("/book/create/{authorId}")
-    public ResponseEntity<Book> createBook(@RequestBody Book book, @PathVariable Long authorId) {
-        if (book == null || authorRepository.findById(authorId).isEmpty()) {
+    @PostMapping("/book/create/{authorId}/{genreId}")
+    public ResponseEntity<Book> createBook(@RequestBody Book book, @PathVariable Long authorId, @PathVariable Long genreId) {
+        if (book == null || authorRepository.findById(authorId).isEmpty() || genreRepository.findById(genreId).isEmpty()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        bookService.createBook(authorId, book);
+        bookService.createBook(authorId, genreId, book);
 
         return new ResponseEntity<>(book, HttpStatus.CREATED);
     }

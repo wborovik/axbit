@@ -10,18 +10,22 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = false)
-@ToString
+//@ToString
 @NoArgsConstructor
 @Entity(name = "authors")
 public class Author extends AbstractEntity {
     @Column(nullable = false)
     private String name;
+
     @Column(nullable = false)
     private String surname;
+
     @Column(nullable = false)
     private String patronymic;
+
     @Column(nullable = false)
     private LocalDate DateOfBirth;
+
     @OneToMany (mappedBy = "author", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Book> books;

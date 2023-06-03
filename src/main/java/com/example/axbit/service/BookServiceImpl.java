@@ -2,6 +2,7 @@ package com.example.axbit.service;
 
 import com.example.axbit.model.Author;
 import com.example.axbit.model.Book;
+import com.example.axbit.model.Genre;
 import com.example.axbit.repository.BookRepository;
 import com.example.axbit.util.IsbnGenerator;
 import jakarta.transaction.Transactional;
@@ -16,12 +17,14 @@ import java.util.List;
 public class BookServiceImpl extends AbstractServiceImpl<Book, BookRepository> implements BookService {
     private final BookRepository bookRepository;
     private final AuthorServiceImpl authorService;
+    private final GenreService genreService;
 
     @Autowired
-    public BookServiceImpl(BookRepository bookRepository, AuthorServiceImpl authorService) {
+    public BookServiceImpl(BookRepository bookRepository, AuthorServiceImpl authorService, GenreService genreService) {
         super(bookRepository);
         this.bookRepository = bookRepository;
         this.authorService = authorService;
+        this.genreService = genreService;
     }
 
     @Override
@@ -46,12 +49,14 @@ public class BookServiceImpl extends AbstractServiceImpl<Book, BookRepository> i
     }
 
     @Override
-    public void createBook(Long authorId, Book book) {
+    public void createBook(Long authorId, Long genreId, Book book) {
         Author author = authorService.getEntityById(authorId);
+        Genre genre = genreService.getEntityById(genreId);
         book.setCreationDate(LocalDate.now());
         book.setModificationDate(LocalDate.now());
         book.setISBN(IsbnGenerator.isbnGenerator());
         book.setAuthor(author);
+        book.setGenre(genre);
         bookRepository.save(book);
     }
 

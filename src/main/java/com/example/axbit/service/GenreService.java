@@ -1,4 +1,7 @@
 package com.example.axbit.service;
 
-public interface GenreService {
+import com.example.axbit.model.Genre;
+
+public interface GenreService extends AbstractService<Genre> {
+    void createGenre(Genre genre);
 }
