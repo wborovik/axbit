@@ -33,11 +33,11 @@ public abstract class AbstractControllerImpl<T extends AbstractEntity, S extends
 
     @Override
     public ResponseEntity<AbstractEntity> getEntityById(@PathVariable Long id) {
-        AbstractEntity author = service.getEntityById(id);
-        if (author == null) {
+        AbstractEntity entity = service.getEntityById(id);
+        if (entity == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(author, HttpStatus.OK);
+        return new ResponseEntity<>(entity, HttpStatus.OK);
     }
 
     @Override

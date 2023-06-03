@@ -1,6 +1,5 @@
 package com.example.axbit.service;
 
-import com.example.axbit.model.Author;
 import com.example.axbit.model.Genre;
 import com.example.axbit.repository.GenreRepository;
 import jakarta.transaction.Transactional;
@@ -40,5 +39,13 @@ public class GenreServiceImpl extends AbstractServiceImpl<Genre, GenreRepository
         genre.setCreationDate(LocalDate.now());
         genre.setModificationDate(LocalDate.now());
         genreRepository.save(genre);
+    }
+
+    @Override
+    public void updateGenreById(Long id, Genre genre) {
+        Genre genreUpdate = getEntityById(id);
+        genreUpdate.setDescription(genre.getDescription());
+        genreUpdate.setModificationDate(LocalDate.now());
+        genreRepository.save(genreUpdate);
     }
 }

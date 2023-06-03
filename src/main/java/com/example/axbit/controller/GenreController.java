@@ -44,4 +44,13 @@ public class GenreController extends AbstractControllerImpl<Genre, GenreService>
         genreService.createGenre(genre);
         return new ResponseEntity<>(genre, HttpStatus.CREATED);
     }
+
+    @PutMapping("/genre/update/{id}")
+    public ResponseEntity<Genre> updateGenre(@PathVariable Long id, @RequestBody Genre genre) {
+        if (genre == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        this.genreService.updateGenreById(id, genre);
+        return new ResponseEntity<>(genre, HttpStatus.OK);
+    }
 }
