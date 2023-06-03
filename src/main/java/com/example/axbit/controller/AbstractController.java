@@ -8,6 +8,8 @@ import java.util.List;
 
 public interface AbstractController<T> {
     ResponseEntity<List<T>> getAllEntity();
+
     ResponseEntity<T> getEntityById(@PathVariable Long id);
+
     ResponseEntity<HttpStatus> deleteEntityById(@PathVariable Long id);
 }

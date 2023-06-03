@@ -13,6 +13,7 @@ import java.util.List;
 @Transactional
 public class AuthorServiceImpl extends AbstractServiceImpl<Author, AuthorRepository> implements AuthorService {
     private final AuthorRepository authorRepository;
+
     @Autowired
     public AuthorServiceImpl(AuthorRepository authorRepository) {
         super(authorRepository);

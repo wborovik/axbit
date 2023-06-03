@@ -11,6 +11,7 @@ import java.util.List;
 @RestController
 public class GenreController extends AbstractControllerImpl<Genre, GenreService> {
     private final GenreService genreService;
+
     public GenreController(GenreService service, GenreService genreService) {
         super(service);
         this.genreService = genreService;

@@ -1,6 +1,5 @@
 package com.example.axbit.controller;
 
-import com.example.axbit.dto.AuthorDto;
 import com.example.axbit.dto.BookDto;
 import com.example.axbit.model.Book;
 import com.example.axbit.repository.AuthorRepository;

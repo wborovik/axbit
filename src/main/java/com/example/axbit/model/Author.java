@@ -25,7 +25,7 @@ public class Author extends AbstractEntity {
     @Past
     private LocalDate DateOfBirth;
 
-    @OneToMany (mappedBy = "author", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Book> books;
 }
