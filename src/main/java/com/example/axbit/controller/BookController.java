@@ -1,6 +1,5 @@
 package com.example.axbit.controller;
 
-import com.example.axbit.model.AbstractEntity;
 import com.example.axbit.model.Book;
 import com.example.axbit.repository.AuthorRepository;
 import com.example.axbit.repository.GenreRepository;
@@ -29,13 +28,13 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
 
     @Override
     @GetMapping("/books")
-    public ResponseEntity<List<? extends AbstractEntity>> getAllEntity() {
+    public ResponseEntity<List<Book>> getAllEntity() {
         return super.getAllEntity();
     }
 
     @Override
     @GetMapping("book/{id}")
-    public ResponseEntity<AbstractEntity> getEntityById(@PathVariable Long id) {
+    public ResponseEntity<Book> getEntityById(@PathVariable Long id) {
         return super.getEntityById(id);
     }
 

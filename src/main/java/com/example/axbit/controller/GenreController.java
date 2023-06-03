@@ -1,7 +1,5 @@
 package com.example.axbit.controller;
 
-import com.example.axbit.model.AbstractEntity;
-import com.example.axbit.model.Author;
 import com.example.axbit.model.Genre;
 import com.example.axbit.service.GenreService;
 import org.springframework.http.HttpStatus;
@@ -20,13 +18,13 @@ public class GenreController extends AbstractControllerImpl<Genre, GenreService>
 
     @Override
     @GetMapping("/genre/{id}")
-    public ResponseEntity<AbstractEntity> getEntityById(@PathVariable Long id) {
+    public ResponseEntity<Genre> getEntityById(@PathVariable Long id) {
         return super.getEntityById(id);
     }
 
     @Override
     @GetMapping("/genres")
-    public ResponseEntity<List<? extends AbstractEntity>> getAllEntity() {
+    public ResponseEntity<List<Genre>> getAllEntity() {
         return super.getAllEntity();
     }
 

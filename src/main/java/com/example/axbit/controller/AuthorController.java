@@ -1,6 +1,5 @@
 package com.example.axbit.controller;
 
-import com.example.axbit.model.AbstractEntity;
 import com.example.axbit.model.Author;
 import com.example.axbit.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,13 +21,13 @@ public class AuthorController extends AbstractControllerImpl<Author, AuthorServi
 
     @Override
     @GetMapping("/authors")
-    public ResponseEntity<List<? extends AbstractEntity>> getAllEntity() {
+    public ResponseEntity<List<Author>> getAllEntity() {
         return super.getAllEntity();
     }
 
     @Override
     @GetMapping("author/{id}")
-    public ResponseEntity<AbstractEntity> getEntityById(@PathVariable Long id) {
+    public ResponseEntity<Author> getEntityById(@PathVariable Long id) {
         return super.getEntityById(id);
     }
 

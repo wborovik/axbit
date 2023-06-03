@@ -18,9 +18,9 @@ public abstract class AbstractControllerImpl<T extends AbstractEntity, S extends
     }
 
     @Override
-    public ResponseEntity<List<? extends AbstractEntity>> getAllEntity() {
+    public ResponseEntity<List<T>> getAllEntity() {
         try {
-            List<? extends AbstractEntity> entities = new ArrayList<>(service.getAllEntity());
+            List<T> entities = new ArrayList<>(service.getAllEntity());
 
             if (entities.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -32,8 +32,8 @@ public abstract class AbstractControllerImpl<T extends AbstractEntity, S extends
     }
 
     @Override
-    public ResponseEntity<AbstractEntity> getEntityById(@PathVariable Long id) {
-        AbstractEntity entity = service.getEntityById(id);
+    public ResponseEntity<T> getEntityById(@PathVariable Long id) {
+        T entity = service.getEntityById(id);
         if (entity == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
