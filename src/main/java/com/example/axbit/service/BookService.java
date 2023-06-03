@@ -9,7 +9,7 @@ import java.util.List;
 public interface BookService extends AbstractService<Book> {
     List<Book> getAllBooksByAuthorId(Long authorId);
 
-    void createBook(Long authorId, Long genreId, Book book);
+    void createBookByAuthorAndGenre(Long authorId, Long genreId, Book book);
 
     void updateBookById(Long id, Book book);
 }

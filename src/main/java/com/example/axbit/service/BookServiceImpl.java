@@ -49,7 +49,7 @@ public class BookServiceImpl extends AbstractServiceImpl<Book, BookRepository> i
     }
 
     @Override
-    public void createBook(Long authorId, Long genreId, Book book) {
+    public void createBookByAuthorAndGenre(Long authorId, Long genreId, Book book) {
         Author author = authorService.getEntityById(authorId);
         Genre genre = genreService.getEntityById(genreId);
         book.setCreationDate(LocalDate.now());
@@ -64,7 +64,7 @@ public class BookServiceImpl extends AbstractServiceImpl<Book, BookRepository> i
     public void updateBookById(Long id, Book book) {
         Book bookUpdate = getEntityById(id);
         bookUpdate.setBookTitle(book.getBookTitle());
-        bookUpdate.setGenre(book.getGenre());
+        bookUpdate.setGenre(bookUpdate.getGenre());
         bookUpdate.setModificationDate(LocalDate.now());
         bookRepository.save(bookUpdate);
     }

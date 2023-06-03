@@ -2,6 +2,7 @@ package com.example.axbit.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Past;
 import lombok.*;
 
 import java.time.LocalDate;
@@ -10,20 +11,18 @@ import java.util.List;
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = false)
-//@ToString
-@NoArgsConstructor
+@NoArgsConstructor(force = true)
 @Entity(name = "authors")
 public class Author extends AbstractEntity {
-    @Column(nullable = false)
+    @NonNull
     private String name;
 
-    @Column(nullable = false)
+    @NonNull
     private String surname;
 
-    @Column(nullable = false)
     private String patronymic;
 
-    @Column(nullable = false)
+    @Past
     private LocalDate DateOfBirth;
 
     @OneToMany (mappedBy = "author", cascade = CascadeType.ALL)

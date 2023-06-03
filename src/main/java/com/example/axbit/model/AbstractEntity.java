@@ -8,8 +8,6 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@EqualsAndHashCode
-@ToString
 @NoArgsConstructor
 @MappedSuperclass
 public abstract class AbstractEntity implements Serializable {
@@ -17,6 +15,7 @@ public abstract class AbstractEntity implements Serializable {
     @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private LocalDate creationDate;
     private LocalDate modificationDate;
 }

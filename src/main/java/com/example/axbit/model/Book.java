@@ -1,17 +1,20 @@
 package com.example.axbit.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.validator.constraints.ISBN;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 @Getter
 @Setter
 @EqualsAndHashCode(callSuper = false)
-//@ToString
 @NoArgsConstructor
 @Entity(name = "books")
 public class Book extends AbstractEntity {
@@ -23,7 +26,6 @@ public class Book extends AbstractEntity {
 
     @ManyToOne
     @JoinColumn(name = "genre_id")
-    @JsonIgnore
     private Genre genre;
 
     @ManyToOne
