@@ -1,8 +1,6 @@
 package com.example.axbit.service;
 
-import com.example.axbit.model.Author;
 import com.example.axbit.model.Book;
-import com.example.axbit.model.Genre;
 import com.example.axbit.repository.BookRepository;
 import com.example.axbit.util.IsbnGenerator;
 import jakarta.transaction.Transactional;

@@ -5395,3 +5395,6 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Duplicate entry 'C
 2023-06-04 22:03:17,806 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
 2023-06-04 22:03:17,856 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.BookService - Input Book title: Create Bookff, authorId: 1, genreId: 1
 2023-06-04 22:03:17,922 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.BookService - Book created id: 6title: Create Bookff ISBN: 978-5-15-663958-8
+2023-06-04 22:04:55,776 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 22:04:55,778 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 22:04:55,783 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
