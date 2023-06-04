@@ -19,10 +19,15 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(NotCreateOrUpdateException.class)
-    public ResponseEntity<Object> handleNotCreate(Exception ex, WebRequest request) {
+    public ResponseEntity<Object> handleNotCreateOrUpdate(Exception ex, WebRequest request) {
         ErrorMessage errors = errors(ex);
         errors.setStatus(HttpStatus.BAD_REQUEST.value());
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(NotDeleteException.class)
+    public ResponseEntity<Object> handleNotDelete(Exception ex, WebRequest request) {
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     private ErrorMessage errors(Exception ex) {

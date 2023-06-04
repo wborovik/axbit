@@ -20,7 +20,6 @@ import jakarta.validation.constraints.NotNull;
 public class Book extends AbstractEntity {
     @NotNull
     private String bookTitle;
-
     @NotNull
     @ISBN
     private String ISBN;

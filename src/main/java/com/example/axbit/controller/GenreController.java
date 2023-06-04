@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 public class GenreController extends AbstractControllerImpl<Genre, GenreService> {
     private final GenreService genreService;
-    private static final Logger LOGGER = LogManager.getLogger(GenreService.class);
+    private final Logger logger = LogManager.getLogger(GenreService.class);
 
     public GenreController(GenreService service, GenreService genreService) {
         super(service);
@@ -42,12 +42,12 @@ public class GenreController extends AbstractControllerImpl<Genre, GenreService>
     @PostMapping("/genre/create")
     public ResponseEntity<Genre> createGenre(@RequestBody Genre genre) {
         try {
-            LOGGER.debug("Input Genre description: " + genre.getDescription());
+            logger.debug("Input Genre description: " + genre.getDescription());
             genreService.createGenre(genre);
-            LOGGER.debug("Genre created id: " + genre.getId() + " description: " + genre.getDescription());
+            logger.debug("Genre created id: " + genre.getId() + " description: " + genre.getDescription());
             return new ResponseEntity<>(genre, HttpStatus.CREATED);
         } catch (Exception e) {
-            LOGGER.debug("Genre not created");
+            logger.debug("Genre not created", e);
             throw new NotCreateOrUpdateException("Genre not created");
         }
     }
@@ -55,12 +55,12 @@ public class GenreController extends AbstractControllerImpl<Genre, GenreService>
     @PutMapping("/genre/update/{id}")
     public ResponseEntity<Genre> updateGenreById(@PathVariable Long id, @RequestBody Genre genre) {
         try {
-            LOGGER.debug("Update genre id: " + id + " new description: " + genre.getDescription());
+            logger.debug("Update genre id: " + id + " new description: " + genre.getDescription());
             this.genreService.updateGenreById(id, genre);
-            LOGGER.debug("Genre update id: " + genre.getId() + " new description: " + genre.getDescription());
+            logger.debug("Genre update id: " + genre.getId() + " new description: " + genre.getDescription());
             return new ResponseEntity<>(genre, HttpStatus.OK);
         } catch (Exception e) {
-            LOGGER.debug("Genre not update");
+            logger.debug("Genre not update", e);
             throw new NotCreateOrUpdateException("Genre not update");
         }
     }

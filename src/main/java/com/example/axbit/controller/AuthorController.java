@@ -20,8 +20,7 @@ import java.util.stream.Collectors;
 public class AuthorController extends AbstractControllerImpl<Author, AuthorService> {
     private final AuthorService authorService;
     private final ModelMapper modelMapper;
-    private static final Logger LOGGER = LogManager.getLogger(AuthorService.class);
-
+    private final Logger logger = LogManager.getLogger(AuthorService.class);
 
     @Autowired
     public AuthorController(AuthorService authorService, ModelMapper modelMapper) {
@@ -36,10 +35,10 @@ public class AuthorController extends AbstractControllerImpl<Author, AuthorServi
                 .map(post -> modelMapper.map(post, AuthorDto.class))
                 .collect(Collectors.toList());
         if (entities.isEmpty()) {
-            LOGGER.debug("Author exist db");
+            logger.debug("Author exist db");
             throw new EntityNotFoundException("Author not found");
         }
-        LOGGER.debug("Author retrieved from db");
+        logger.debug("Author retrieved from db");
         return new ResponseEntity<>(entities, HttpStatus.OK);
     }
 
@@ -58,13 +57,13 @@ public class AuthorController extends AbstractControllerImpl<Author, AuthorServi
     @PostMapping("/author/create")
     public ResponseEntity<Author> createAuthor(@RequestBody Author author) {
         try {
-            LOGGER.debug("Input Author name: " + author.getName() + " surname: " + author.getSurname() +
+            logger.debug("Input Author name: " + author.getName() + " surname: " + author.getSurname() +
                     " patronymic: " + author.getPatronymic() + " birth date: " + author.getDateOfBirth());
             authorService.createAuthor(author);
-            LOGGER.debug("Author created id: " + author.getId());
+            logger.debug("Author created id: " + author.getId());
             return new ResponseEntity<>(author, HttpStatus.CREATED);
-        } catch (Exception ex) {
-            LOGGER.debug("Author is not created");
+        } catch (Exception e) {
+            logger.debug("Author is not created", e);
             throw new NotCreateOrUpdateException("Author not created");
         }
     }
@@ -72,14 +71,14 @@ public class AuthorController extends AbstractControllerImpl<Author, AuthorServi
     @PatchMapping("/author/update/{id}")
     public ResponseEntity<Author> updateAuthorById(@PathVariable Long id, @RequestBody Author author) {
         try {
-            LOGGER.debug("Update author id: " + id + " new name: " + author.getName() + " new surname: " + author.getName()
+            logger.debug("Update author id: " + id + " new name: " + author.getName() + " new surname: " + author.getName()
                     + " new patronymic: " + author.getPatronymic() + " new birth date: " + author.getDateOfBirth());
 
             this.authorService.updateAuthorById(id, author);
-            LOGGER.debug("Author update id: " + author.getId());
+            logger.debug("Author update id: " + author.getId());
             return new ResponseEntity<>(author, HttpStatus.OK);
         } catch (Exception e) {
-            LOGGER.debug("Author not update");
+            logger.debug("Author not update", e);
             throw new NotCreateOrUpdateException("Author not update");
         }
     }

@@ -25,7 +25,7 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
     private final AuthorService authorService;
     private final GenreService genreService;
     private final ModelMapper modelMapper;
-    private static final Logger LOGGER = LogManager.getLogger(BookService.class);
+    private final Logger logger = LogManager.getLogger(BookService.class);
 
     @Autowired
     public BookController(BookService bookService, AuthorService authorService, GenreService genreService, ModelMapper modelMapper) {
@@ -41,10 +41,10 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
         List<BookDto> entities = bookService.getAllEntity().stream()
                 .map(post -> modelMapper.map(post, BookDto.class)).collect(Collectors.toList());
         if (entities.isEmpty()) {
-            LOGGER.debug("Books exist db");
+            logger.debug("Books exist db");
             throw new EntityNotFoundException("Books not found");
         }
-        LOGGER.debug("Books retrieved from db");
+        logger.debug("Books retrieved from db");
         return new ResponseEntity<>(entities, HttpStatus.OK);
     }
 
@@ -62,13 +62,13 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
 
     @GetMapping("/author/books/{authorId}")
     public ResponseEntity<List<Book>> getAllBooksByAuthorId(@PathVariable Long authorId) {
-        LOGGER.debug("Input Author id: " + authorId);
+        logger.debug("Input Author id: " + authorId);
         List<Book> books = new ArrayList<>(bookService.getAllBooksByAuthorId(authorId));
         if (books.isEmpty()) {
-            LOGGER.debug("Books for Author with id: " + authorId + " exist db");
+            logger.debug("Books for Author with id: " + authorId + " exist db");
             throw new EntityNotFoundException("Books not found");
         }
-        LOGGER.debug("Books for Author with id " + authorId + " retrieved from db");
+        logger.debug("Books for Author with id " + authorId + " retrieved from db");
         return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
@@ -76,15 +76,15 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
     public ResponseEntity<Book> createBookByAuthorAndGenre(@RequestBody Book book, @PathVariable Long authorId,
                                                            @PathVariable Long genreId) {
         try {
-            LOGGER.debug("Input Book title: " + book.getBookTitle() + ", authorId: " + authorId + ", genreId: " + genreId);
+            logger.debug("Input Book title: " + book.getBookTitle() + ", authorId: " + authorId + ", genreId: " + genreId);
             if (authorService.getEntityById(authorId) == null || genreService.getEntityById(genreId) == null) {
                 throw new Exception();
             }
             bookService.createBookByAuthorAndGenre(authorId, genreId, book);
-            LOGGER.debug("Book created id: " + book.getId() + "title: " + book.getBookTitle() + " ISBN: " + book.getISBN());
+            logger.debug("Book created id: " + book.getId() + "title: " + book.getBookTitle() + " ISBN: " + book.getISBN());
             return new ResponseEntity<>(book, HttpStatus.CREATED);
         } catch (Exception e) {
-            LOGGER.debug("Book not created");
+            logger.debug("Book not created", e);
             throw new NotCreateOrUpdateException("Book not created");
         }
     }
@@ -92,12 +92,12 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
     @PatchMapping("/book/update/{id}")
     public ResponseEntity<Book> updateBookById(@PathVariable Long id, @RequestBody Book book) {
         try {
-            LOGGER.debug("Update book id: " + id + " new title: " + book.getBookTitle());
+            logger.debug("Update book id: " + id + " new title: " + book.getBookTitle());
             this.bookService.updateBookById(id, book);
-            LOGGER.debug("Book update id: " + book.getId() + "new title: " + book.getBookTitle());
+            logger.debug("Book update id: " + book.getId() + "new title: " + book.getBookTitle());
             return new ResponseEntity<>(book, HttpStatus.OK);
         } catch (Exception e) {
-            LOGGER.debug("Book not update");
+            logger.debug("Book not update", e);
             throw new NotCreateOrUpdateException("Book not update");
         }
     }

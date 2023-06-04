@@ -22,13 +22,10 @@ import java.util.List;
 public class Author extends AbstractEntity {
     @NotNull
     private String name;
-
     @NotNull
     private String surname;
-
     @NotNull
     private String patronymic;
-
     @Past
     @NotNull
     private LocalDate DateOfBirth;

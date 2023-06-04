@@ -38,7 +38,6 @@ public class AuthorServiceImpl extends AbstractServiceImpl<Author, AuthorReposit
     @Override
     public void createAuthor(Author author) {
         author.setCreationDate(LocalDate.now());
-        author.setModificationDate(LocalDate.now());
         authorRepository.save(author);
     }
 
