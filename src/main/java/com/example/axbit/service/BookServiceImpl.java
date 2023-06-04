@@ -50,12 +50,10 @@ public class BookServiceImpl extends AbstractServiceImpl<Book, BookRepository> i
 
     @Override
     public void createBookByAuthorAndGenre(Long authorId, Long genreId, Book book) {
-        Author author = authorService.getEntityById(authorId);
-        Genre genre = genreService.getEntityById(genreId);
         book.setCreationDate(LocalDate.now());
         book.setISBN(IsbnGenerator.isbnGenerator());
-        book.setAuthor(author);
-        book.setGenre(genre);
+        book.setAuthor(authorService.getEntityById(authorId));
+        book.setGenre(genreService.getEntityById(genreId));
         bookRepository.save(book);
     }
 
