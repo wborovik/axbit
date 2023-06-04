@@ -1,6 +1,7 @@
 package com.example.axbit.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
@@ -22,6 +23,7 @@ public class Book extends AbstractEntity {
     private String bookTitle;
     @NotNull
     @ISBN
+    @Column(unique = true)
     private String ISBN;
 
     @ManyToOne

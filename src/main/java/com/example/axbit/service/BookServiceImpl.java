@@ -53,7 +53,6 @@ public class BookServiceImpl extends AbstractServiceImpl<Book, BookRepository> i
         Author author = authorService.getEntityById(authorId);
         Genre genre = genreService.getEntityById(genreId);
         book.setCreationDate(LocalDate.now());
-        book.setModificationDate(LocalDate.now());
         book.setISBN(IsbnGenerator.isbnGenerator());
         book.setAuthor(author);
         book.setGenre(genre);

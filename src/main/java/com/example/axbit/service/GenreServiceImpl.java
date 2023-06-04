@@ -37,7 +37,6 @@ public class GenreServiceImpl extends AbstractServiceImpl<Genre, GenreRepository
     @Override
     public void createGenre(Genre genre) {
         genre.setCreationDate(LocalDate.now());
-        genre.setModificationDate(LocalDate.now());
         genreRepository.save(genre);
     }
 
