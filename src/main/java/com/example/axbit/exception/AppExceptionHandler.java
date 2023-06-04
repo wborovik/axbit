@@ -18,7 +18,7 @@ public class AppExceptionHandler extends ResponseEntityExceptionHandler {
         return new ResponseEntity<>(errors, HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(EntityNotCreateException.class)
+    @ExceptionHandler(NotCreateOrUpdateException.class)
     public ResponseEntity<Object> handleNotCreate(Exception ex, WebRequest request) {
         ErrorMessage errors = errors(ex);
         errors.setStatus(HttpStatus.BAD_REQUEST.value());

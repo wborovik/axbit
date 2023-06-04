@@ -18,5 +18,6 @@ public class AuthorDto {
     @NotBlank
     private String patronymic;
     @Past
+    @NotBlank
     private LocalDate DateOfBirth;
 }

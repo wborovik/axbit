@@ -1332,8 +1332,8 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or u
 2023-06-04 13:17:28,651 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-06-04 13:17:28,651 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2023-06-04 13:17:28,652 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2023-06-04 13:17:35,557 ERROR [http-nio-8888-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.example.axbit.exception.EntityNotFoundException: Entity id not fond: 10] with root cause
-com.example.axbit.exception.EntityNotFoundException: Entity id not fond: 10
+2023-06-04 13:17:35,557 ERROR [http-nio-8888-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.example.axbit.exception.NotFoundException: Entity id not fond: 10] with root cause
+com.example.axbit.exception.NotFoundException: Entity id not fond: 10
 	at com.example.axbit.controller.AbstractControllerImpl.getEntityById(AbstractControllerImpl.java:39)
 	at com.example.axbit.controller.AuthorController.getEntityById(AuthorController.java:47)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
@@ -2377,3 +2377,1378 @@ List of constraint violations:[
 2023-06-04 15:13:11,879 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-06-04 15:13:11,880 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-06-04 15:13:11,883 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 15:30:00,316 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 15:30:00,335 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 21312 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 15:30:00,335 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 15:30:00,336 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 15:30:00,631 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 15:30:00,660 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 15:30:00,885 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 15:30:00,889 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:30:00,890 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 15:30:00,890 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 15:30:00,928 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 15:30:00,929 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 570 ms
+2023-06-04 15:30:00,993 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 15:30:01,015 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 15:30:01,016 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 15:30:01,074 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:30:01,130 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 15:30:01,138 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 15:30:01,207 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40faff12
+2023-06-04 15:30:01,207 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 15:30:01,225 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 15:30:01,226 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 15:30:01,326 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:30:01,649 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 15:30:01,681 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 15:30:01,882 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 15:30:02,028 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:30:02,035 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 15:30:02,039 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.856 seconds (process running for 2.211)
+2023-06-04 15:30:57,846 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 15:30:57,848 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 15:30:57,851 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 15:30:58,972 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 15:30:58,990 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 21440 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 15:30:58,991 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 15:30:58,991 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 15:30:59,271 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 15:30:59,300 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 15:30:59,527 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 15:30:59,532 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:30:59,532 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 15:30:59,532 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 15:30:59,573 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 15:30:59,573 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 563 ms
+2023-06-04 15:30:59,640 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 15:30:59,660 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 15:30:59,661 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 15:30:59,717 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:30:59,768 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 15:30:59,775 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 15:30:59,842 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6a4af081
+2023-06-04 15:30:59,843 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 15:30:59,863 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 15:30:59,864 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 15:30:59,964 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:31:00,287 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 15:31:00,446 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 15:31:00,645 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 15:31:00,809 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:31:00,816 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 15:31:00,821 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 2.05 seconds (process running for 2.415)
+2023-06-04 15:31:15,252 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 15:31:15,252 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 15:31:15,253 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 15:31:15,360 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.BookService - Book created
+2023-06-04 15:31:41,171 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 15:31:41,172 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 15:31:41,175 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 15:36:47,550 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 15:36:47,569 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 21637 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 15:36:47,569 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 15:36:47,569 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 15:36:47,851 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 15:36:47,879 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2023-06-04 15:36:48,104 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 15:36:48,109 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:36:48,109 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 15:36:48,109 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 15:36:48,149 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 15:36:48,149 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 556 ms
+2023-06-04 15:36:48,211 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 15:36:48,230 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 15:36:48,231 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 15:36:48,294 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:36:48,347 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 15:36:48,355 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 15:36:48,420 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5409dfdd
+2023-06-04 15:36:48,421 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 15:36:48,440 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 15:36:48,441 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 15:36:48,536 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:36:48,858 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 15:36:48,889 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 15:36:49,094 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 15:36:49,251 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:36:49,258 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 15:36:49,263 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.846 seconds (process running for 2.154)
+2023-06-04 15:37:08,170 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 15:37:08,171 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 15:37:08,171 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 15:37:08,252 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Book not created
+2023-06-04 15:53:01,834 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 15:53:01,836 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 15:53:01,840 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 15:56:48,658 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 15:56:48,679 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 22243 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 15:56:48,679 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 15:56:48,679 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 15:56:48,959 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 15:56:48,987 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 15:56:49,209 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 15:56:49,214 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:56:49,214 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 15:56:49,215 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 15:56:49,257 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 15:56:49,258 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 552 ms
+2023-06-04 15:56:49,321 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 15:56:49,344 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 15:56:49,344 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 15:56:49,401 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:56:49,456 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 15:56:49,464 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 15:56:49,533 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@18026052
+2023-06-04 15:56:49,534 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 15:56:49,552 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 15:56:49,553 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 15:56:49,653 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 15:56:49,983 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 15:56:50,016 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 15:56:50,224 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 15:56:50,373 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 15:56:50,380 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 15:56:50,384 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.854 seconds (process running for 2.196)
+2023-06-04 15:56:58,194 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 15:56:58,194 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 15:56:58,194 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 15:56:58,276 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Genre created
+2023-06-04 15:57:07,519 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Genre not created
+2023-06-04 16:00:46,303 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:00:46,304 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:00:46,309 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:00:48,133 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:00:48,146 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 22416 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:00:48,146 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:00:48,146 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:00:48,419 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:00:48,447 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:00:48,672 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:00:48,676 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:00:48,676 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:00:48,677 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:00:48,716 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:00:48,717 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 550 ms
+2023-06-04 16:00:48,777 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:00:48,796 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:00:48,797 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:00:48,860 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:00:48,915 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:00:48,923 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:00:48,991 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20b54cfe
+2023-06-04 16:00:48,992 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:00:49,010 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:00:49,011 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:00:49,104 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:00:49,426 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:00:49,459 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:00:49,655 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:00:49,799 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:00:49,806 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:00:49,810 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.816 seconds (process running for 2.143)
+2023-06-04 16:00:54,201 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:00:54,201 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:00:54,202 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 16:00:54,296 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Genre created
+2023-06-04 16:01:37,656 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:01:37,657 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:01:37,661 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:01:39,398 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:01:39,418 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 22560 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:01:39,419 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:01:39,419 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:01:39,702 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:01:39,731 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:01:39,952 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:01:39,957 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:01:39,957 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:01:39,957 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:01:39,997 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:01:39,998 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 547 ms
+2023-06-04 16:01:40,060 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:01:40,084 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:01:40,085 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:01:40,147 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:01:40,206 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:01:40,214 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:01:40,287 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2326180c
+2023-06-04 16:01:40,288 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:01:40,306 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:01:40,307 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:01:40,404 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:01:40,728 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:01:40,761 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:01:40,959 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:01:41,110 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:01:41,116 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:01:41,121 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.854 seconds (process running for 2.184)
+2023-06-04 16:01:44,639 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:01:44,639 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:01:44,640 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 16:01:44,744 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - com.example.axbit.model.Genre@5a0ca940
+2023-06-04 16:03:11,910 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:03:11,911 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:03:11,915 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:03:13,683 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:03:13,707 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 22699 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:03:13,707 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:03:13,707 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:03:13,975 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:03:14,003 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:03:14,225 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:03:14,230 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:03:14,230 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:03:14,231 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:03:14,270 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:03:14,271 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 539 ms
+2023-06-04 16:03:14,338 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:03:14,363 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:03:14,364 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:03:14,426 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:03:14,480 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:03:14,488 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:03:14,557 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1f172892
+2023-06-04 16:03:14,558 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:03:14,576 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:03:14,577 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:03:14,676 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:03:15,001 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:03:15,035 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:03:15,235 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:03:15,385 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:03:15,392 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:03:15,396 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.861 seconds (process running for 2.199)
+2023-06-04 16:03:25,172 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:03:25,172 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:03:25,173 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 16:03:25,258 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre
+2023-06-04 16:03:49,967 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:03:49,968 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:03:49,972 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:04:18,838 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:04:18,852 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 22842 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:04:18,852 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:04:18,853 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:04:19,131 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:04:19,162 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:04:19,396 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:04:19,400 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:04:19,400 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:04:19,400 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:04:19,441 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:04:19,441 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 566 ms
+2023-06-04 16:04:19,503 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:04:19,523 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:04:19,524 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:04:19,582 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:04:19,637 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:04:19,645 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:04:19,714 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@54329480
+2023-06-04 16:04:19,715 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:04:19,742 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:04:19,743 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:04:19,850 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:04:20,177 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:04:20,210 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:04:20,426 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:04:20,581 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:04:20,588 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:04:20,592 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.893 seconds (process running for 2.23)
+2023-06-04 16:04:28,915 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:04:28,915 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:04:28,916 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 16:04:29,006 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Genre createdcom.example.axbit.model.Genre@5a0ca940
+2023-06-04 16:05:29,561 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:05:29,563 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:05:29,567 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:05:31,341 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:05:31,358 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 22974 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:05:31,359 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:05:31,359 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:05:31,636 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:05:31,665 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:05:31,892 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:05:31,897 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:05:31,897 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:05:31,897 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:05:31,932 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:05:31,932 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 550 ms
+2023-06-04 16:05:31,993 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:05:32,015 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:05:32,016 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:05:32,074 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:05:32,130 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:05:32,137 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:05:32,205 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@639cb788
+2023-06-04 16:05:32,206 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:05:32,225 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:05:32,226 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:05:32,327 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:05:32,656 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:05:32,690 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:05:32,895 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:05:33,045 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:05:33,051 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:05:33,056 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.851 seconds (process running for 2.205)
+2023-06-04 16:05:41,512 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:05:41,513 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:05:41,513 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 16:05:41,601 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre created 7Create Genre3
+2023-06-04 16:07:04,055 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:07:04,057 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:07:04,060 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:07:05,883 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:07:05,901 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 23113 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:07:05,902 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:07:05,902 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:07:06,180 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:07:06,209 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:07:06,426 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:07:06,431 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:07:06,431 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:07:06,431 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:07:06,471 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:07:06,472 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 543 ms
+2023-06-04 16:07:06,533 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:07:06,554 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:07:06,555 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:07:06,616 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:07:06,671 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:07:06,679 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:07:06,748 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20b54cfe
+2023-06-04 16:07:06,749 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:07:06,767 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:07:06,768 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:07:06,864 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:07:07,185 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:07:07,217 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:07:07,412 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:07:07,564 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:07:07,571 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:07:07,576 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.828 seconds (process running for 2.153)
+2023-06-04 16:07:13,359 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:07:13,360 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:07:13,360 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 16:07:13,439 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre created id: 8 description: Create Genre3
+2023-06-04 16:11:06,242 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:11:06,244 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:11:06,254 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:11:08,033 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:11:08,050 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 23437 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:11:08,050 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:11:08,050 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:11:08,322 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:11:08,352 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:11:08,568 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:11:08,572 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:11:08,573 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:11:08,573 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:11:08,610 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:11:08,611 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 538 ms
+2023-06-04 16:11:08,671 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:11:08,694 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:11:08,695 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:11:08,756 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:11:08,810 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:11:08,817 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:11:08,885 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@20b54cfe
+2023-06-04 16:11:08,886 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:11:08,904 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:11:08,904 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:11:08,999 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:11:09,321 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:11:09,354 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:11:09,549 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:11:09,696 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:11:09,703 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:11:09,708 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.811 seconds (process running for 2.16)
+2023-06-04 16:11:16,785 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:11:16,785 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:11:16,785 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 16:11:16,832 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 16:11:16,872 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Genre created id: 9 description: Create Genre3
+2023-06-04 16:11:51,365 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Input Genre description: null
+2023-06-04 16:11:51,376 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Genre not created
+2023-06-04 16:13:13,759 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:13:13,760 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:13:13,764 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:13:15,559 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:13:15,576 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 23614 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:13:15,576 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:13:15,576 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:13:15,863 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:13:15,893 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:13:16,119 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:13:16,124 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:13:16,124 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:13:16,124 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:13:16,162 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:13:16,162 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 564 ms
+2023-06-04 16:13:16,226 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:13:16,248 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:13:16,249 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:13:16,308 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:13:16,360 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:13:16,367 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:13:16,434 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5409dfdd
+2023-06-04 16:13:16,434 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:13:16,453 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:13:16,454 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:13:16,557 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:13:16,883 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:13:16,920 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:13:17,125 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:13:17,282 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:13:17,288 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:13:17,293 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.871 seconds (process running for 2.21)
+2023-06-04 16:13:23,928 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:13:23,928 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:13:23,929 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 16:13:23,973 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Input Genre description: null
+2023-06-04 16:13:23,997 WARN  [http-nio-8888-exec-2] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1048, SQLState: 23000
+2023-06-04 16:13:23,997 ERROR [http-nio-8888-exec-2] o.h.e.jdbc.spi.SqlExceptionHelper - Column 'description' cannot be null
+2023-06-04 16:13:24,001 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre not created
+2023-06-04 16:22:43,245 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:22:43,247 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:22:43,251 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:22:45,259 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:22:45,278 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 23837 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:22:45,278 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:22:45,278 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:22:45,547 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:22:45,575 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:22:45,800 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:22:45,805 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:22:45,805 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:22:45,805 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:22:45,845 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:22:45,846 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 545 ms
+2023-06-04 16:22:45,910 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:22:45,930 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:22:45,931 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:22:45,989 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:22:46,043 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:22:46,051 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:22:46,119 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@68e47e7
+2023-06-04 16:22:46,120 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:22:46,140 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:22:46,140 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:22:46,239 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:22:46,568 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:22:46,599 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:22:46,801 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:22:46,957 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:22:46,964 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:22:46,969 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.839 seconds (process running for 2.152)
+2023-06-04 16:22:54,360 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:22:54,360 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:22:54,361 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 16:22:54,412 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Input Book title: Create Book3, authorId: 4, genreId: 3
+2023-06-04 16:22:54,435 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Book not created
+2023-06-04 16:23:28,809 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:23:28,811 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:23:28,816 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:23:51,784 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:23:51,801 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 23986 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:23:51,801 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:23:51,801 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:23:52,084 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:23:52,114 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:23:52,333 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:23:52,337 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:23:52,337 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:23:52,337 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:23:52,380 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:23:52,380 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 558 ms
+2023-06-04 16:23:52,450 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:23:52,471 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:23:52,472 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:23:52,529 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:23:52,584 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:23:52,591 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:23:52,659 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fcaea93
+2023-06-04 16:23:52,660 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:23:52,679 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:23:52,680 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:23:52,785 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:23:53,130 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:23:53,163 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:23:53,360 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:23:53,503 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:23:53,510 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:23:53,514 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.864 seconds (process running for 2.189)
+2023-06-04 16:24:07,167 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:24:07,167 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:24:07,167 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 16:24:07,217 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Input Book title: Create Book3, authorId: 1, genreId: 1
+2023-06-04 16:24:07,286 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Book created id: 3title: Create Book3
+2023-06-04 16:33:44,282 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:33:44,283 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 16:33:44,287 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 16:33:46,265 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 16:33:46,283 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 24353 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 16:33:46,284 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 16:33:46,284 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 16:33:46,570 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 16:33:46,599 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 16:33:46,816 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 16:33:46,820 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:33:46,820 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 16:33:46,820 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 16:33:46,868 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 16:33:46,868 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 560 ms
+2023-06-04 16:33:46,929 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 16:33:46,949 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 16:33:46,950 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 16:33:47,006 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:33:47,058 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 16:33:47,065 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 16:33:47,130 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b211077
+2023-06-04 16:33:47,131 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 16:33:47,149 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 16:33:47,150 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 16:33:47,256 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 16:33:47,582 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 16:33:47,616 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 16:33:47,815 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 16:33:47,964 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 16:33:47,971 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 16:33:47,975 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.847 seconds (process running for 2.171)
+2023-06-04 16:34:01,842 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 16:34:01,842 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 16:34:01,843 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 16:34:01,922 ERROR [http-nio-8888-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "com.example.axbit.model.Author.setName(String)" because "authorUpdate" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "com.example.axbit.model.Author.setName(String)" because "authorUpdate" is null
+	at com.example.axbit.service.AuthorServiceImpl.updateAuthorById(AuthorServiceImpl.java:48)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702)
+	at com.example.axbit.service.AuthorServiceImpl$$SpringCGLIB$$0.updateAuthorById(<generated>)
+	at com.example.axbit.controller.AuthorController.updateAuthorById(AuthorController.java:78)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:888)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2023-06-04 16:34:18,281 DEBUG [http-nio-8888-exec-4] c.e.axbit.service.AuthorService - Input Author name: Crate Autor3 Author surname: Crate Autor3 Author patronymic: Ivanich Author birth date: 1995-06-04
+2023-06-04 16:34:18,313 DEBUG [http-nio-8888-exec-4] c.e.axbit.service.AuthorService - Author created id: 2
+2023-06-04 16:34:58,732 DEBUG [http-nio-8888-exec-5] c.e.axbit.service.AuthorService - Input Author name: Crate Autor3 Author surname: Crate Autor3 Author patronymic: null Author birth date: 1995-06-04
+2023-06-04 16:34:58,742 DEBUG [http-nio-8888-exec-5] c.e.axbit.service.AuthorService - Author is not created
+2023-06-04 16:35:27,918 DEBUG [http-nio-8888-exec-7] c.e.axbit.service.AuthorService - Input Author name: Crate Autor3 Author surname: Crate Autor3 Author patronymic: Ivanich Author birth date: 2024-06-04
+2023-06-04 16:35:27,919 DEBUG [http-nio-8888-exec-7] c.e.axbit.service.AuthorService - Author is not created
+2023-06-04 17:11:01,056 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 17:11:01,075 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 24953 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 17:11:01,075 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 17:11:01,076 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 17:11:01,356 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 17:11:01,387 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2023-06-04 17:11:01,618 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 17:11:01,622 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:11:01,623 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 17:11:01,623 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 17:11:01,657 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 17:11:01,657 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 559 ms
+2023-06-04 17:11:01,723 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 17:11:01,742 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 17:11:01,743 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 17:11:01,802 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:11:01,858 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 17:11:01,867 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 17:11:01,937 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fcaea93
+2023-06-04 17:11:01,938 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 17:11:01,957 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 17:11:01,958 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 17:11:02,054 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:11:02,377 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 17:11:02,411 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:11:02,610 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 17:11:02,758 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:11:02,764 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 17:11:02,769 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.849 seconds (process running for 2.223)
+2023-06-04 17:11:23,379 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 17:11:23,379 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 17:11:23,380 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 17:11:23,429 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Update genre id: null new description: Update Genre
+2023-06-04 17:11:23,490 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Genre update id: null new description: Update Genre
+2023-06-04 17:13:22,829 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:13:22,830 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 17:13:22,835 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 17:13:24,700 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 17:13:24,719 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 25109 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 17:13:24,719 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 17:13:24,720 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 17:13:24,997 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 17:13:25,027 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 17:13:25,256 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 17:13:25,260 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:13:25,261 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 17:13:25,261 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 17:13:25,302 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 17:13:25,302 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 558 ms
+2023-06-04 17:13:25,370 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 17:13:25,393 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 17:13:25,394 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 17:13:25,454 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:13:25,509 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 17:13:25,517 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 17:13:25,588 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@734fbae3
+2023-06-04 17:13:25,589 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 17:13:25,608 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 17:13:25,608 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 17:13:25,710 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:13:26,044 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 17:13:26,078 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:13:26,287 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 17:13:26,444 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:13:26,451 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 17:13:26,456 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.909 seconds (process running for 2.258)
+2023-06-04 17:13:32,655 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 17:13:32,656 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 17:13:32,656 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 17:13:32,704 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Update genre id: 1 new description: Update Genre
+2023-06-04 17:13:32,744 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Genre update id: null new description: Update Genre
+2023-06-04 17:14:10,869 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Update genre id: 1 new description: null
+2023-06-04 17:14:10,892 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Genre not update
+2023-06-04 17:14:43,311 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:14:43,313 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 17:14:43,318 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 17:55:15,337 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 17:55:15,355 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 25823 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 17:55:15,355 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 17:55:15,355 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 17:55:15,629 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 17:55:15,658 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 17:55:15,881 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 17:55:15,885 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:55:15,886 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 17:55:15,886 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 17:55:15,925 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 17:55:15,925 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 548 ms
+2023-06-04 17:55:15,988 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 17:55:16,009 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 17:55:16,010 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 17:55:16,068 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:55:16,125 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 17:55:16,132 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 17:55:16,203 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@734fbae3
+2023-06-04 17:55:16,204 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 17:55:16,224 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 17:55:16,225 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 17:55:16,337 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:55:16,670 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 17:55:16,703 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:55:16,908 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 17:55:17,062 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:55:17,068 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 17:55:17,073 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.87 seconds (process running for 2.193)
+2023-06-04 17:55:46,439 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 17:55:46,439 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 17:55:46,440 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 17:55:46,488 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.BookService - Input Book title: Create Book3, authorId: 2, genreId: 2
+2023-06-04 17:55:46,524 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.BookService - Book not created
+2023-06-04 17:57:40,571 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:57:40,572 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 17:57:40,576 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 17:57:42,481 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 17:57:42,506 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 25990 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 17:57:42,506 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 17:57:42,507 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 17:57:42,771 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 17:57:42,800 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 17:57:43,028 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 17:57:43,033 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:57:43,034 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 17:57:43,034 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 17:57:43,070 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 17:57:43,070 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 541 ms
+2023-06-04 17:57:43,133 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 17:57:43,155 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 17:57:43,156 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 17:57:43,213 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:57:43,266 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 17:57:43,274 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 17:57:43,341 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@388f1258
+2023-06-04 17:57:43,342 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 17:57:43,360 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 17:57:43,360 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 17:57:43,455 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:57:43,791 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 17:57:43,826 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:57:44,038 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 17:57:44,189 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:57:44,196 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 17:57:44,201 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.86 seconds (process running for 2.201)
+2023-06-04 17:57:48,009 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 17:57:48,010 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 17:57:48,010 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 17:57:48,063 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Input Book title: Create Book3, authorId: 2, genreId: 2
+2023-06-04 17:57:48,136 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Book created id: 4title: Create Book3 ISBN: 978-5-05-761828-6
+2023-06-04 17:58:10,458 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.BookService - Input Book title: Create Book3, authorId: 20, genreId: 20
+2023-06-04 17:58:10,460 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.BookService - Book not created
+2023-06-04 17:58:29,238 DEBUG [http-nio-8888-exec-5] c.example.axbit.service.BookService - Input Book title: null, authorId: 2, genreId: 2
+2023-06-04 17:58:29,251 DEBUG [http-nio-8888-exec-5] c.example.axbit.service.BookService - Book created id: 5title: null ISBN: 978-5-97-149240-5
+2023-06-04 17:59:19,710 DEBUG [http-nio-8888-exec-6] c.example.axbit.service.BookService - Input Book title: null, authorId: 2, genreId: 2
+2023-06-04 17:59:19,720 DEBUG [http-nio-8888-exec-6] c.example.axbit.service.BookService - Book created id: 6title: null ISBN: 978-5-20-898161-0
+2023-06-04 17:59:50,860 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:59:50,861 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 17:59:50,865 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 17:59:52,573 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 17:59:52,590 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 26154 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 17:59:52,590 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 17:59:52,590 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 17:59:52,860 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 17:59:52,891 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2023-06-04 17:59:53,118 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 17:59:53,122 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:59:53,123 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 17:59:53,123 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 17:59:53,165 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 17:59:53,166 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 553 ms
+2023-06-04 17:59:53,228 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 17:59:53,250 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 17:59:53,251 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 17:59:53,310 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:59:53,364 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 17:59:53,372 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 17:59:53,440 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2326180c
+2023-06-04 17:59:53,441 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 17:59:53,459 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 17:59:53,460 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 17:59:53,554 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 17:59:53,878 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 17:59:53,911 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 17:59:54,111 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 17:59:54,260 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 17:59:54,266 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 17:59:54,271 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.834 seconds (process running for 2.161)
+2023-06-04 18:00:03,282 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 18:00:03,282 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 18:00:03,283 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 18:00:03,330 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Input Book title: null, authorId: 2, genreId: 2
+2023-06-04 18:00:03,389 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Book not created
+2023-06-04 18:00:56,074 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:00:56,075 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:00:56,078 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:03:49,850 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:03:49,867 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 26328 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:03:49,867 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:03:49,867 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:03:50,132 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:03:50,162 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:03:50,393 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:03:50,398 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:03:50,398 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:03:50,399 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:03:50,436 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:03:50,436 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 549 ms
+2023-06-04 18:03:50,495 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:03:50,517 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:03:50,518 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:03:50,574 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:03:50,628 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:03:50,635 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:03:50,703 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4d25f816
+2023-06-04 18:03:50,704 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:03:50,723 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:03:50,724 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:03:50,822 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:03:51,145 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:03:51,177 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:03:51,379 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:03:51,533 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:03:51,540 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:03:51,544 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.827 seconds (process running for 2.182)
+2023-06-04 18:04:10,706 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 18:04:10,707 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 18:04:10,707 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 18:04:10,755 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.BookService - Update book id: 50 new title: Update Book
+2023-06-04 18:04:10,778 ERROR [http-nio-8888-exec-2] c.example.axbit.service.BookService - Book not update
+2023-06-04 18:14:51,752 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:14:51,754 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:14:51,758 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:14:55,894 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:14:55,922 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 27051 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:14:55,922 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:14:55,923 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:14:56,235 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:14:56,263 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:14:56,497 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:14:56,501 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:14:56,501 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:14:56,501 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:14:56,535 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:14:56,535 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 576 ms
+2023-06-04 18:14:56,595 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:14:56,617 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:14:56,618 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:14:56,675 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:14:56,730 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:14:56,737 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:14:56,806 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6c6c2a73
+2023-06-04 18:14:56,806 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:14:56,825 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:14:56,825 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:14:56,925 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:14:57,245 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:14:57,278 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:14:57,479 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:14:57,622 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:14:57,629 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:14:57,633 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 2.01 seconds (process running for 2.362)
+2023-06-04 18:22:43,686 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:22:43,687 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:22:43,691 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:22:45,462 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:22:45,478 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 27920 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:22:45,479 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:22:45,479 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:22:45,756 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:22:45,785 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:22:46,006 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:22:46,011 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:22:46,011 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:22:46,011 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:22:46,052 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:22:46,052 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 549 ms
+2023-06-04 18:22:46,113 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:22:46,135 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:22:46,136 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:22:46,192 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:22:46,247 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:22:46,255 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:22:46,322 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2326180c
+2023-06-04 18:22:46,323 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:22:46,341 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:22:46,342 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:22:46,437 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:22:46,760 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:22:46,816 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:22:47,025 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:22:47,181 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:22:47,188 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:22:47,192 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.866 seconds (process running for 2.194)
+2023-06-04 18:23:03,577 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 18:23:03,577 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 18:23:03,577 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 18:23:03,622 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:23:03,659 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre created id: 10 description: Create Genre3
+2023-06-04 18:23:06,330 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:23:06,338 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Genre created id: 11 description: Create Genre3
+2023-06-04 18:23:07,559 DEBUG [http-nio-8888-exec-4] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:23:07,567 DEBUG [http-nio-8888-exec-4] c.example.axbit.service.GenreService - Genre created id: 12 description: Create Genre3
+2023-06-04 18:23:09,121 DEBUG [http-nio-8888-exec-5] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:23:09,129 DEBUG [http-nio-8888-exec-5] c.example.axbit.service.GenreService - Genre created id: 13 description: Create Genre3
+2023-06-04 18:23:32,223 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:23:32,224 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:23:32,227 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:23:33,737 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:23:33,756 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 28094 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:23:33,756 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:23:33,757 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:23:34,045 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:23:34,076 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:23:34,305 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:23:34,309 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:23:34,310 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:23:34,310 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:23:34,345 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:23:34,345 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 568 ms
+2023-06-04 18:23:34,413 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:23:34,433 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:23:34,434 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:23:34,491 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:23:34,544 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:23:34,552 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:23:34,619 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b211077
+2023-06-04 18:23:34,620 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:23:34,638 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:23:34,639 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:23:34,745 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:23:35,065 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:23:35,110 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:23:35,318 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:23:35,468 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:23:35,474 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:23:35,479 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.871 seconds (process running for 2.217)
+2023-06-04 18:23:42,774 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 18:23:42,774 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 18:23:42,774 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 18:23:42,819 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:23:42,855 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre created id: 14 description: Create Genre3
+2023-06-04 18:26:51,182 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:26:51,183 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:26:51,187 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:26:52,949 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:26:52,968 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 28297 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:26:52,969 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:26:52,969 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:26:53,246 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:26:53,275 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:26:53,501 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:26:53,506 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:26:53,506 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:26:53,506 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:26:53,548 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:26:53,548 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 557 ms
+2023-06-04 18:26:53,613 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:26:53,635 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:26:53,636 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:26:53,693 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:26:53,749 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:26:53,757 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:26:53,828 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2326180c
+2023-06-04 18:26:53,829 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:26:53,848 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:26:53,848 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:26:53,946 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:26:54,291 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:26:54,324 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:26:54,536 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:26:54,688 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:26:54,695 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:26:54,700 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.889 seconds (process running for 2.204)
+2023-06-04 18:26:59,874 INFO  [http-nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 18:26:59,874 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 18:26:59,875 INFO  [http-nio-8888-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-06-04 18:26:59,925 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:26:59,965 DEBUG [http-nio-8888-exec-1] c.example.axbit.service.GenreService - Genre created id: 15 description: Create Genre3
+2023-06-04 18:27:01,738 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:27:01,747 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Genre created id: 16 description: Create Genre3
+2023-06-04 18:27:13,955 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:27:13,957 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:27:13,962 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:29:41,259 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:29:41,276 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 28552 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:29:41,276 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:29:41,276 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:29:41,557 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:29:41,587 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:29:41,818 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:29:41,822 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:29:41,823 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:29:41,823 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:29:41,863 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:29:41,863 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 567 ms
+2023-06-04 18:29:41,926 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:29:41,946 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:29:41,947 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:29:42,005 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:29:42,060 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:29:42,067 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:29:42,136 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2326180c
+2023-06-04 18:29:42,137 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:29:42,157 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:29:42,157 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:29:42,254 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:29:42,583 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:29:42,633 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:29:42,843 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:29:42,989 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:29:42,995 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:29:43,000 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 1.872 seconds (process running for 2.19)
+2023-06-04 18:29:50,205 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:29:50,206 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:29:50,210 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:30:08,298 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:30:08,316 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 28687 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:30:08,316 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:30:08,316 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:30:08,589 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:30:08,617 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:30:08,839 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:30:08,843 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:30:08,844 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:30:08,844 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:30:08,886 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:30:08,886 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 547 ms
+2023-06-04 18:30:08,947 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:30:08,970 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:30:08,971 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:30:09,029 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:30:09,086 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:30:09,093 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:30:09,161 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2bdb5e0f
+2023-06-04 18:30:09,162 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:30:09,180 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:30:09,181 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:30:09,276 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:30:09,599 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:30:09,809 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:30:10,017 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:30:10,180 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:30:10,187 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:30:10,192 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 2.03 seconds (process running for 2.365)
+2023-06-04 18:30:15,890 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 18:30:15,890 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 18:30:15,891 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 18:30:15,934 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:30:15,972 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre created id: 2 description: Create Genre3
+2023-06-04 18:30:19,026 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:30:19,028 WARN  [http-nio-8888-exec-3] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+2023-06-04 18:30:19,028 ERROR [http-nio-8888-exec-3] o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'Create Genre3' for key 'genres.UKqwwle7s307cd6pe271epm8o57'
+2023-06-04 18:30:19,036 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Genre not created
+2023-06-04 18:31:14,613 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:31:14,614 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:31:14,618 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-06-04 18:31:16,311 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:31:16,330 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 28852 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:31:16,331 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:31:16,331 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:31:16,601 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:31:16,631 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:31:16,859 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:31:16,864 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:31:16,864 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:31:16,865 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:31:16,902 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:31:16,903 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 548 ms
+2023-06-04 18:31:16,967 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:31:16,990 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:31:16,991 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:31:17,051 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:31:17,109 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:31:17,116 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:31:18,187 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'axbit'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:229)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:197)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at com.example.axbit.AxbitApplication.main(AxbitApplication.java:17)
+2023-06-04 18:31:18,192 WARN  [main] o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+java.sql.SQLSyntaxErrorException: Unknown database 'axbit'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:229)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:197)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at com.example.axbit.AxbitApplication.main(AxbitApplication.java:17)
+2023-06-04 18:31:18,213 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:31:18,214 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:31:18,310 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:31:18,642 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:31:18,651 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:31:19,653 ERROR [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+java.sql.SQLSyntaxErrorException: Unknown database 'axbit'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:291)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at com.example.axbit.AxbitApplication.main(AxbitApplication.java:17)
+2023-06-04 18:31:19,654 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1049, SQLState: 42000
+2023-06-04 18:31:19,654 ERROR [main] o.h.e.jdbc.spi.SqlExceptionHelper - Unknown database 'axbit'
+2023-06-04 18:31:19,656 ERROR [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'axbit'] [n/a]
+2023-06-04 18:31:19,656 WARN  [main] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'axbit'] [n/a]
+2023-06-04 18:31:19,657 INFO  [main] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-06-04 18:31:19,663 INFO  [main] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-06-04 18:31:19,671 ERROR [main] o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'axbit'] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1156)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:931)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:733)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:435)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1305)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1294)
+	at com.example.axbit.AxbitApplication.main(AxbitApplication.java:17)
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'axbit'] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:421)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1816)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 16 common frames omitted
+Caused by: org.hibernate.exception.SQLGrammarException: Unable to open JDBC Connection for DDL execution [Unknown database 'axbit'] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:64)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63)
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcDatabaseMetaData(ImprovedExtractionContextImpl.java:70)
+	at org.hibernate.tool.schema.extract.internal.InformationExtractorJdbcDatabaseMetaDataImpl.processTableResultSet(InformationExtractorJdbcDatabaseMetaDataImpl.java:64)
+	at org.hibernate.tool.schema.extract.internal.AbstractInformationExtractorImpl.getTables(AbstractInformationExtractorImpl.java:564)
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.getTablesInformation(DatabaseInformationImpl.java:122)
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:72)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:232)
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:117)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:284)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:143)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:140)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:291)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:431)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1455)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	... 20 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'axbit'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316)
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46)
+	... 41 common frames omitted
+2023-06-04 18:31:31,213 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.0.Final
+2023-06-04 18:31:31,231 INFO  [main] com.example.axbit.AxbitApplication - Starting AxbitApplication using Java 19.0.2 with PID 28962 (/home/vladimir/axbit/target/classes started by vladimir in /home/vladimir/axbit)
+2023-06-04 18:31:31,231 DEBUG [main] com.example.axbit.AxbitApplication - Running with Spring Boot v3.1.0, Spring v6.0.9
+2023-06-04 18:31:31,232 INFO  [main] com.example.axbit.AxbitApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-04 18:31:31,505 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-06-04 18:31:31,535 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2023-06-04 18:31:31,765 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-06-04 18:31:31,770 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:31:31,770 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-06-04 18:31:31,771 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.8]
+2023-06-04 18:31:31,808 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-06-04 18:31:31,808 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 552 ms
+2023-06-04 18:31:31,873 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-06-04 18:31:31,896 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.2.Final
+2023-06-04 18:31:31,897 INFO  [main] org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+2023-06-04 18:31:31,955 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:31:32,010 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-06-04 18:31:32,018 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-06-04 18:31:32,089 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11e834ad
+2023-06-04 18:31:32,090 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-06-04 18:31:32,109 INFO  [main] org.hibernate.orm.dialect - HHH035001: Using dialect: org.hibernate.dialect.MySQL8Dialect, version: 8.0
+2023-06-04 18:31:32,110 WARN  [main] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-06-04 18:31:32,212 INFO  [main] o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+2023-06-04 18:31:32,550 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-06-04 18:31:32,780 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:31:33,004 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-06-04 18:31:33,168 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-06-04 18:31:33,175 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-06-04 18:31:33,179 INFO  [main] com.example.axbit.AxbitApplication - Started AxbitApplication in 2.105 seconds (process running for 2.464)
+2023-06-04 18:31:37,396 INFO  [http-nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-06-04 18:31:37,396 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-06-04 18:31:37,397 INFO  [http-nio-8888-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-06-04 18:31:37,443 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:31:37,483 DEBUG [http-nio-8888-exec-2] c.example.axbit.service.GenreService - Genre created id: 2 description: Create Genre3
+2023-06-04 18:31:38,861 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Input Genre description: Create Genre3
+2023-06-04 18:31:38,864 WARN  [http-nio-8888-exec-3] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1062, SQLState: 23000
+2023-06-04 18:31:38,864 ERROR [http-nio-8888-exec-3] o.h.e.jdbc.spi.SqlExceptionHelper - Duplicate entry 'Create Genre3' for key 'genres.UK_qwwle7s307cd6pe271epm8o57'
+2023-06-04 18:31:38,874 DEBUG [http-nio-8888-exec-3] c.example.axbit.service.GenreService - Genre not created
+2023-06-04 18:32:18,469 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-06-04 18:32:18,470 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-06-04 18:32:18,476 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

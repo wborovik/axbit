@@ -1,10 +1,14 @@
 package com.example.axbit.controller;
 
 import com.example.axbit.dto.BookDto;
+import com.example.axbit.exception.NotCreateOrUpdateException;
+import com.example.axbit.exception.EntityNotFoundException;
 import com.example.axbit.model.Book;
-import com.example.axbit.repository.AuthorRepository;
-import com.example.axbit.repository.GenreRepository;
+import com.example.axbit.service.AuthorService;
 import com.example.axbit.service.BookService;
+import com.example.axbit.service.GenreService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -18,33 +22,30 @@ import java.util.stream.Collectors;
 @RestController
 public class BookController extends AbstractControllerImpl<Book, BookService> {
     private final BookService bookService;
-    private final AuthorRepository authorRepository;
-    private final GenreRepository genreRepository;
+    private final AuthorService authorService;
+    private final GenreService genreService;
     private final ModelMapper modelMapper;
+    private static final Logger LOGGER = LogManager.getLogger(BookService.class);
 
     @Autowired
-    public BookController(BookService bookService, AuthorRepository authorRepository, GenreRepository genreRepository,
-                          ModelMapper modelMapper) {
+    public BookController(BookService bookService, AuthorService authorService, GenreService genreService, ModelMapper modelMapper) {
         super(bookService);
         this.bookService = bookService;
-        this.authorRepository = authorRepository;
-        this.genreRepository = genreRepository;
+        this.authorService = authorService;
+        this.genreService = genreService;
         this.modelMapper = modelMapper;
     }
 
     @GetMapping("/books")
     public ResponseEntity<List<BookDto>> getAllBooks() {
-        try {
-            List<BookDto> entities = bookService.getAllEntity().stream().map(post -> modelMapper.map(post, BookDto.class))
-                    .collect(Collectors.toList());
-
-            if (entities.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            return new ResponseEntity<>(entities, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        List<BookDto> entities = bookService.getAllEntity().stream()
+                .map(post -> modelMapper.map(post, BookDto.class)).collect(Collectors.toList());
+        if (entities.isEmpty()) {
+            LOGGER.debug("Books exist db");
+            throw new EntityNotFoundException("Books not found");
         }
+        LOGGER.debug("Books retrieved from db");
+        return new ResponseEntity<>(entities, HttpStatus.OK);
     }
 
     @Override
@@ -61,35 +62,43 @@ public class BookController extends AbstractControllerImpl<Book, BookService> {
 
     @GetMapping("/author/books/{authorId}")
     public ResponseEntity<List<Book>> getAllBooksByAuthorId(@PathVariable Long authorId) {
-        try {
-            List<Book> books = new ArrayList<>(bookService.getAllBooksByAuthorId(authorId));
-
-            if (books.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-            }
-            return new ResponseEntity<>(books, HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        LOGGER.debug("Input Author id: " + authorId);
+        List<Book> books = new ArrayList<>(bookService.getAllBooksByAuthorId(authorId));
+        if (books.isEmpty()) {
+            LOGGER.debug("Books for Author with id: " + authorId + " exist db");
+            throw new EntityNotFoundException("Books not found");
         }
+        LOGGER.debug("Books for Author with id " + authorId + " retrieved from db");
+        return new ResponseEntity<>(books, HttpStatus.OK);
     }
 
     @PostMapping("/book/create/{authorId}/{genreId}")
-    public ResponseEntity<Book> createBookByAuthorAndGenre(@RequestBody Book book, @PathVariable Long authorId, @PathVariable Long genreId) {
-        if (book == null || authorRepository.findById(authorId).isEmpty() || genreRepository.findById(genreId).isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+    public ResponseEntity<Book> createBookByAuthorAndGenre(@RequestBody Book book, @PathVariable Long authorId,
+                                                           @PathVariable Long genreId) {
+        try {
+            LOGGER.debug("Input Book title: " + book.getBookTitle() + ", authorId: " + authorId + ", genreId: " + genreId);
+            if (authorService.getEntityById(authorId) == null || genreService.getEntityById(genreId) == null) {
+                throw new Exception();
+            }
+            bookService.createBookByAuthorAndGenre(authorId, genreId, book);
+            LOGGER.debug("Book created id: " + book.getId() + "title: " + book.getBookTitle() + " ISBN: " + book.getISBN());
+            return new ResponseEntity<>(book, HttpStatus.CREATED);
+        } catch (Exception e) {
+            LOGGER.debug("Book not created");
+            throw new NotCreateOrUpdateException("Book not created");
         }
-        bookService.createBookByAuthorAndGenre(authorId, genreId, book);
-
-        return new ResponseEntity<>(book, HttpStatus.CREATED);
     }
 
     @PatchMapping("/book/update/{id}")
     public ResponseEntity<Book> updateBookById(@PathVariable Long id, @RequestBody Book book) {
-        if (book == null) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        try {
+            LOGGER.debug("Update book id: " + id + " new title: " + book.getBookTitle());
+            this.bookService.updateBookById(id, book);
+            LOGGER.debug("Book update id: " + book.getId() + "new title: " + book.getBookTitle());
+            return new ResponseEntity<>(book, HttpStatus.OK);
+        } catch (Exception e) {
+            LOGGER.debug("Book not update");
+            throw new NotCreateOrUpdateException("Book not update");
         }
-        this.bookService.updateBookById(id, book);
-
-        return new ResponseEntity<>(book, HttpStatus.OK);
     }
 }

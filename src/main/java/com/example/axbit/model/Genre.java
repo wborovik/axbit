@@ -14,6 +14,7 @@ import java.util.List;
 @Entity(name = "genres")
 public class Genre extends AbstractEntity {
     @NotNull
+    @Column(unique = true)
     private String description;
 
     @OneToMany(mappedBy = "genre", cascade = CascadeType.ALL)

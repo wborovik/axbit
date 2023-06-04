@@ -18,6 +18,7 @@ import jakarta.validation.constraints.NotNull;
 @NoArgsConstructor
 @Entity(name = "books")
 public class Book extends AbstractEntity {
+    @NotNull
     private String bookTitle;
 
     @NotNull

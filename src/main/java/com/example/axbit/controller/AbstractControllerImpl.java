@@ -24,7 +24,6 @@ public abstract class AbstractControllerImpl<T extends AbstractEntity, S extends
     @Override
     public ResponseEntity<List<T>> getAllEntity() {
             List<T> entities = new ArrayList<>(service.getAllEntity());
-
             if (entities.isEmpty()) {
                 LOGGER.debug("Entities exist db");
                 throw new EntityNotFoundException("Entities not found");
@@ -35,6 +34,7 @@ public abstract class AbstractControllerImpl<T extends AbstractEntity, S extends
 
     @Override
     public ResponseEntity<T> getEntityById(@PathVariable Long id) {
+        LOGGER.debug("Input id: " + id);
         T entity = service.getEntityById(id);
         if (entity == null) {
             LOGGER.debug("Entity with id " + id + " exist db");
