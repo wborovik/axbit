@@ -1,7 +1,6 @@
 package com.example.axbit.exception;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
