@@ -1,8 +1,12 @@
 package com.example.axbit.controller;
 
 import com.example.axbit.dto.AuthorDto;
+import com.example.axbit.exception.EntityNotCreateException;
 import com.example.axbit.model.Author;
+import com.example.axbit.service.AbstractService;
 import com.example.axbit.service.AuthorService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +20,7 @@ import java.util.stream.Collectors;
 public class AuthorController extends AbstractControllerImpl<Author, AuthorService> {
     private final AuthorService authorService;
     private final ModelMapper modelMapper;
+    private static final Logger LOGGER = LogManager.getLogger(AuthorService.class);
 
 
     @Autowired
@@ -33,7 +38,7 @@ public class AuthorController extends AbstractControllerImpl<Author, AuthorServi
                     .collect(Collectors.toList());
 
             if (entities.isEmpty()) {
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
             return new ResponseEntity<>(entities, HttpStatus.OK);
         } catch (Exception e) {
@@ -55,11 +60,14 @@ public class AuthorController extends AbstractControllerImpl<Author, AuthorServi
 
     @PostMapping("/author/create")
     public ResponseEntity<Author> createAuthor(@RequestBody Author author) {
-        if (author == null) {
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        try {
+            authorService.createAuthor(author);
+            LOGGER.debug("Author created");
+            return new ResponseEntity<>(author, HttpStatus.CREATED);
+        } catch (Exception ex) {
+            LOGGER.debug("Author is not created");
+            throw new EntityNotCreateException("Author was not created");
         }
-        authorService.createAuthor(author);
-        return new ResponseEntity<>(author, HttpStatus.CREATED);
     }
 
     @PatchMapping("/author/update/{id}")

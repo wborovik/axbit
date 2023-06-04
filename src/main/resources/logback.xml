@@ -21,7 +21,7 @@
         </encoder>
     </appender>
 
-    <logger name="av.test.task" level="debug"/>
+    <logger name="com.example.axbit" level="debug"/>
 
     <logger name="org.springframework" level="info">
         <appender-ref ref="STDOUT" />
